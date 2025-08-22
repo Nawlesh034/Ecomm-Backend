@@ -6,7 +6,17 @@ import authRoutes from "./routes/authRoutes.js";
 const app = express();
 
 app.use(cors({
-    origin:"https://ecomm-opal-psi.vercel.app"
+    origin: [
+        "http://localhost:3000",
+        "http://localhost:5173",
+        "http://localhost:5174",
+        "https://ecomm-opal-psi.vercel.app",
+        "https://ecomm-opal-psi.vercel.app/"
+    ],
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+    optionsSuccessStatus: 200
 }));
 app.use(express.json());
 
