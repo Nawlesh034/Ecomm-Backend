@@ -5,7 +5,9 @@ import authRoutes from "./routes/authRoutes.js";
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin:"https://ecomm-opal-psi.vercel.app"
+}));
 app.use(express.json());
 
 app.get("/", (req, res) => {
