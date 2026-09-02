@@ -37,7 +37,7 @@ export const createProduct = async (req, res) => {
       name,
       category,
       price,
-      image: image || 'https://via.placeholder.com/300x200/cccccc/ffffff?text=No+Image',
+      image: image || 'https://placehold.co/300x200/cccccc/ffffff?text=No+Image',
       description: description || ''
     });
     
